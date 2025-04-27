@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-146dp">
+
+        <LinearLayout
+            android:id="@+id/topBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#7D0A0A"
+            android:elevation="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="4dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <ImageView
+                    android:id="@+id/logoIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logonotext"
+                    android:contentDescription="App Logo" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/appTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="We Safe"
+                android:fontFamily="serif"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/homeIcon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:contentDescription="Home"
+                android:src="@drawable/home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/userDetailsCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_card"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topBar">
+
+            <TextView
+                android:id="@+id/userDetailsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="User Details"
+                android:fontFamily="serif"
+                android:textColor="#A855F7"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:text="Name: --"
+                android:fontFamily="serif"
+                android:textColor="#333"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Phone: --"
+                android:fontFamily="serif"
+                android:textColor="#333"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Email:  --"
+                android:fontFamily="serif"
+                android:textColor="#333"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/changeUserDetailsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#A855F7"
+            android:text="Change User Details"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:fontFamily="serif"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userDetailsCard" />
+
+
+        <!-- Add Contact Button -->
+
+        <Button
+            android:id="@+id/viewContactButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#3B82F6"
+            android:text="View Contact"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:fontFamily="serif"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/changeUserDetailsButton" />
+
+        <Button
+            android:id="@+id/addContactButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#3B82F6"
+            android:text="Add Contact"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="serif"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewContactButton" />
+
+        <FrameLayout
+            android:id="@+id/addContactFragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6FCFF"
+    android:padding="16dp">
+
+    <!-- Close Button -->
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:contentDescription="Close"
+        android:src="@drawable/close"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Name -->
+    <TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Name :"
+        android:textColor="#A855F7"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnClose" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/edittext_rounded"
+        android:hint="Enter name"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/nameLabel"
+        app:layout_constraintTop_toTopOf="@id/nameLabel" />
+
+    <!-- Phone -->
+    <TextView
+        android:id="@+id/phoneLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Phone :"
+        android:textColor="#A855F7"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextName" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/edittext_rounded"
+        android:hint="Enter phone"
+        android:inputType="phone"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/phoneLabel"
+        app:layout_constraintTop_toTopOf="@id/phoneLabel" />
+
+    <!-- Email -->
+    <TextView
+        android:id="@+id/emailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Email :"
+        android:textColor="#A855F7"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPhone" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/edittext_rounded"
+        android:hint="Enter email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/emailLabel"
+        app:layout_constraintTop_toTopOf="@id/emailLabel" />
+
+    <!-- Change Details Button -->
+    <Button
+        android:id="@+id/btnChangeDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#A855F7"
+        android:text="Change Details"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextEmail" />
+
+    <!-- Password -->
+    <TextView
+        android:id="@+id/passwordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Password"
+        android:textColor="#A855F7"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnChangeDetails" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/edittext_rounded"
+        android:hint="Enter password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/passwordLabel"
+        app:layout_constraintTop_toTopOf="@id/passwordLabel" />
+
+    <!-- Confirm Button -->
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#A855F7"
+        android:text="Confirm"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPassword" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

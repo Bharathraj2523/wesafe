@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "167651556430",
+    "firebase_url": "https://wsafe-bc890-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "wsafe-bc890",
+    "storage_bucket": "wsafe-bc890.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167651556430:android:9f89c792c5bb4745eb171f",
+        "android_client_info": {
+          "package_name": "com.example.thefinalapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBakUZVb0q-VHUPZnPY_FBklCJxtvcXXdk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

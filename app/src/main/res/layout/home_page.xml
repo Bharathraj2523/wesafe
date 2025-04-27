@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Home_page">
+
+    <!-- 🟦 Top Bar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="#7D0A0A"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="4dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+
+            <ImageView
+                android:id="@+id/logoIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logonotext"
+                android:contentDescription="App Logo" />
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="serif"
+            android:paddingStart="10dp"
+            android:text="We Safe"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/profileIcon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/profile"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:contentDescription="Profile" />
+    </LinearLayout>
+
+    <!-- 🟩 Status -->
+    <TextView
+        android:id="@+id/statusBanner"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/status_background"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="Status Normal!"
+        android:textColor="#00FF00"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar" />
+
+    <!-- 🧠 Learning Buttons + Status -->
+    <Button
+        android:id="@+id/startLearningBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button"
+
+        android:fontFamily="serif"
+        android:padding="12dp"
+        android:text="Start Learning"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusBanner" />
+
+    <TextView
+        android:id="@+id/learningStatusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Ready to start learning"
+        android:textColor="#FF0000"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/startLearningBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/learningProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/learningStatusText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 🔮 Predict Buttons -->
+    <Button
+        android:id="@+id/startPredictBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="serif"
+        android:padding="12dp"
+        android:text="Start Predict"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/learningProgress" />
+
+    <Button
+        android:id="@+id/stopPredictBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="serif"
+        android:padding="12dp"
+        android:text="Stop Predict"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/startPredictBtn" />
+
+    <View
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
